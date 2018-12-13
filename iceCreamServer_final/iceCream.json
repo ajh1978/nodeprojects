@@ -1,0 +1,32 @@
+{
+  "vanilla":{
+    "name":"Vanilla",
+    "price":"1.8 €",
+    "image":"vanilla.png"
+  },
+  "strawberry":{
+    "name":"Strawberry",
+    "price":"2.1 €",
+    "image":"strawberry.png"
+  },
+  "blueberry":{
+    "name":"Blueberry",
+    "price":"5.1 €",
+    "image":"blueberry.png"
+  },
+  "chocolate":{
+    "name":"Chocolate",
+    "price":"0.9 €",
+    "image":"chocolate.png"
+  },
+  "onion":{
+    "name":"Onion",
+    "price":"3.6 €",
+    "image":"onion.png"
+  },
+  "mudcake":{
+    "name":"Mudcake",
+    "price":"1.6 €",
+    "image":"mudcake.png"
+  }
+}

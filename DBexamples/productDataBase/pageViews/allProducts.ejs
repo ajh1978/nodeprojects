@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All products</title>
+    <link rel="stylesheet" href="/styles/styles.css" type="text/css">
+  </head>
+  <body>
+    <main>
+    <h1>All products</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ProductID</th>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% result.forEach(product => { %>
+            <tr>
+              <td><%= product.productId %></td>
+              <td><%= product.name %></td>
+              <td><%= product.model %></td>
+              <td><%= product.price %></td>
+              <td><%= product.type %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <a href="/"><button>Menu</button></a>
+    </main>
+  </body>
+</html>

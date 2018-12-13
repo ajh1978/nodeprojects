@@ -1,0 +1,56 @@
+body {
+  background-color: #808000;
+}
+
+h1 {
+  color: #ffbf80;
+  text-align: center;
+  margin-top: 0;
+  padding: 1em;
+  font-size: 2em;
+  background-color: rgba(50, 0, 0, 0.6);
+  font-family: sans-serif;
+}
+
+#personContainer {
+  width: 90%;
+  padding: 1em;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.person {
+  width: 200px;
+  margin: 10px;
+  background-color: #ffbf80;
+  text-align: center;
+  height: 290px;
+}
+
+.name {
+  color: #330000;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.years {
+  color: #330000;
+}
+
+img {
+  height: 180px;
+  width: 180px;
+}
+
+.imageText {
+  height: 180px;
+  width: 180px;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(225, 225, 208, 0.6);
+  line-height: 180px;
+}

@@ -1,0 +1,47 @@
+main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+table, td ,th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+th {
+  background-color: khaki;
+}
+
+table {
+  margin-bottom: 1em;
+}
+
+tr:nth-child(even) {
+  background-color: teal;
+}
+
+h1 {
+  color: maroon;
+  font-family: sans-serif;
+}
+
+button {
+  background-color: darkgray;
+  color: lightyellow;
+  padding: 0.4em;
+  font-size: 0.8em;
+  border-radius: 5px;
+  margin-bottom: 0.2em;
+}
+
+input:-moz-read-only {
+    background-color: lightgray;
+    caret-color: transparent;
+}
+
+input:read-only {
+    background-color: lightgray;
+    caret-color: transparent;
+}

@@ -1,0 +1,39 @@
+[
+
+{
+"firstName": "Leila",
+"lastName": "Hökki",
+"yearOfBirth": 1999,
+"photo":"leila_hokki.png"
+},
+{
+"firstName": "Helka",
+"lastName": "Ilkiö"
+},
+{
+"firstName": "Aki",
+"lastName": "Köllihe",
+"yearOfBirth": 2005,
+"photo":"aki_kollihe.png"
+},
+{
+"firstName": "Kale",
+"lastName": "Hikilö",
+"yearOfBirth": 1899,
+"yearOfDeath": 1999,
+"photo":"pirkko_puro.png"
+},
+{
+"firstName": "Heikki",
+"lastName": "Ölla",
+"yearOfBirth": 1980,
+"photo":"heikki_olla.jpg"
+},
+{
+"firstName": "Hella",
+"lastName": "Öikki",
+"yearOfBirth": 1990,
+"yearOfDeath": "",
+"photo":""
+}
+]

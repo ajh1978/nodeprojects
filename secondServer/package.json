@@ -1,0 +1,11 @@
+{
+  "name": "secondserver",
+  "version": "1.0.0",
+  "description": "second test server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajh",
+  "license": "ISC"
+}

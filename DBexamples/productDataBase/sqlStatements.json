@@ -1,0 +1,20 @@
+{
+  "getAllSql":[
+    "select productId, name, model, price, type from product"
+  ],
+  "getProductSql":[
+    "select productId, name, model, price, type from product",
+    "where productId=?"
+  ],
+  "insertProductSql":[
+    "insert into product (productId, name, model, price, type)",
+    "values(?,?,?,?,?)"
+  ],
+  "deleteProductSql":[
+    "delete from product where productId=?"
+  ],
+  "updateProductSql":[
+    "update product set name=?, model=?, price=?, type=?",
+    "where productId=?"
+  ]
+}

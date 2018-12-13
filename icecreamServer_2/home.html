@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ice creams 2</title>
+    <script>
+      (function() {
+        let iceCreamList;
+        let name;
+        let price;
+
+        document.addEventListener('DOMContentLoaded', init); // waits until DOM content is loaded. Script can be now on top
+
+        function init() {
+          iceCreamList = document.getElementById('iceCreams');
+          name = document.getElementById('name');
+          price = document.getElementById('price');
+          iceCreamList.addEventListener('change', choose);
+          iceCreamList.value = '';
+        }
+
+        function choose() {
+          let iceCream = iceCreamList.value;
+            if(iceCream.length > 0){
+              fetch(iceCream)
+              .then(result => result.json())
+              .then(data => updateResult(data))
+              .catch(err => console.log(err));
+            }
+            else {
+              updateResult({name:'', price:''});
+            }
+        }
+
+        function updateResult(data) {
+          name.textContent = data.name;
+          price.textContent = data.price;
+        }
+      })()
+      // (function(){})() executes function when the page is loaded
+    </script>
+  </head>
+  <body>
+    <h1>Ice cream selection</h1>
+    <label for = "iceCreams">Choose: </label>
+      <select id="iceCreams">
+        <option value = "">---choose flavor---</option>
+        <option value = "/vanilla">Vanilla</option>
+        <option value = "/strawberry">Strawberry</option>
+        <option value = "/blueberry">Blueberry</option>
+      </select>
+      <div>
+        <p id = "name"></p>
+        <p id = "price"></p>
+      </div>
+  </body>
+</html>

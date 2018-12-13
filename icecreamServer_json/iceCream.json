@@ -1,0 +1,22 @@
+{
+  "vanilla":{
+    "name":"Vanilla",
+    "price":"1.8 €"
+  },
+  "strawberry":{
+    "name":"Strawberry",
+    "price":"2.1 €"
+  },
+  "blueberry":{
+    "name":"Blueberry",
+    "price":"5.1 €"
+  },
+  "chocolate":{
+    "name":"Chocolate",
+    "price":"0.9 €"
+  },
+  "onion":{
+    "name":"Onion",
+    "price":"3.6 €"
+  }
+}

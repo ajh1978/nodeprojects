@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <script>
+      (function(){
+         document.addEventListener('DOMContentLoaded', init);
+
+         function init() {
+           document.getElementById('getJson').addEventListener('click', ()=>{
+             fetch('/json')
+              .then(result=>result.json())
+              .then(data =>updateResult(data))
+              .catch(err=>showError(err.message));
+           });
+
+           document.getElementById('sendJson').addEventListener('click',()=>{
+             let firstname=document.getElementById('firstname').value;
+             let lastname=document.getElementById('lastname').value;
+
+             let person={firstname,lastname};
+
+             let options={
+               method:'POST',
+               body:JSON.stringify(person),
+               headers:{
+                 'Content-Type':'application/json'
+               }
+             };
+
+             fetch('/json',options)
+               .then(result=>result.json())
+               .then(data=>updateResult(data))
+               .catch(err=>showError(err.message))
+           });
+
+
+         }
+
+         function updateResult(data) {
+           document.getElementById('result').textContent=
+            `firstName=${data.firstname}, lastname=${data.lastname}`;
+         }
+
+         function showError(message) {
+           document.getElementById('result').textContent=message;
+         }
+      })();
+    </script>
+  </head>
+  <body>
+    <button id="getJson">get json data</button>
+    <p><label>Firstname: <input type="text" id="firstname"></label></p>
+    <p><label>Lastname: <input type="text" id="lastname"></label></p>
+    <button id="sendJson">Send</button>
+    <p id="result"></p>
+  </body>
+</html>

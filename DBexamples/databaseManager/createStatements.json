@@ -1,0 +1,41 @@
+{
+  "debug": true,
+  "host": "localhost",
+  "mysqlport": 3306,
+  "admin": "root",
+  "adminpassword": "",
+  "user": "ajh",
+  "password": "12345",
+  "database": "persondatabase",
+  "dropuser": true,
+  "tables": [
+    {
+      "name": "person",
+      "fields": [
+        "personId integer not null primary key",
+        "firstname varchar(20) not null",
+        "lastname varchar(30) not null",
+        "department varchar(15)",
+        "salary decimal(6,2)"
+      ],
+      "data": [
+        [1, "Leila", "Hökki", "ict", 5000],
+        [2, "Pasi", "Mökki", "administration", 2500]
+      ]
+    },
+    {
+      "name": "person2",
+      "fields": [
+        "personId integer not null primary key",
+        "firstname varchar(20) not null",
+        "lastname varchar(30) not null",
+        "department varchar(15)",
+        "salary decimal(6,2)"
+      ],
+      "data": [
+        [1, "Leila2", "Hökki2", "ict2", 6000],
+        [2, "Pasi2", "Mökki2", "administration2", 1500]
+      ]
+    }
+  ]
+}

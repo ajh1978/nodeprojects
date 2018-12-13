@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GameApi</title>
+
+    <script>
+      function update() {
+        let url = document.getElementById('url').value;
+        let p = document.getElementById('text');
+        let image = document.getElementById('image');
+        let roomName = document.getElementById('roomName');
+        let exits = document.getElementById('exits');
+
+        fetch(url)
+        .then(data => data.json())
+        .then(room => {
+          roomName.textContent = room.name;
+          p.textContent = room.roomtext;
+          image.src = 'http://localhost:3000/images/' + room.image;
+
+          if(room.exits) {
+            exits.style.display = 'block';
+            Object.keys(room.exits).forEach(function(key) {
+              var btn = document.createElement("BUTTON");        // Create a <button> element
+              var t = document.createTextNode("CLICK ME");       // Create a text node
+              btn.appendChild(t);                                // Append the text to <button>
+              exits.appendChild(btn);                    // Append <button> to <body>
+            });
+          }
+          else {exits.style.display = 'none';}
+        })
+        .catch(err => {
+          p.textContent = '';
+          image.src = '';
+          roomName.textContent = 'error: not found';
+        })
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1>Game API test</h1>
+    <div>
+      <label>API url:
+        <input type="text" id="url" size="50" value="http://localhost:3000/api/levels/1/rooms/1">
+      </label>
+      <button onclick="update();">Send</button>
+      <div id="exits" display="none"></div>
+    </div>
+    <h2 id="roomName"></h2>
+    <p id="text"></p>
+    <img src="" id="image" />
+  </body>
+</html>

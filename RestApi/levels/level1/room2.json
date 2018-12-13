@@ -1,0 +1,15 @@
+{
+  "roomId":2,
+  "name":"room 12",
+  "roomtext":"Description room 2...",
+  "image":"level1room2.png",
+  "exits": {
+    "levels/1/rooms/2": "south",
+    "levels/1/rooms/3": "east"
+  },
+  "actions": {
+    "battle": "kill the orc",
+    "luckTask": "test your luck",
+    "skillTask": "test your skill"
+  }
+}
